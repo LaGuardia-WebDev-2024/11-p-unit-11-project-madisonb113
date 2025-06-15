@@ -14,24 +14,89 @@ Select ONE Additional
 -->
 
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Unit 11 Project</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
-    <style></style>
-  </head>
+<!-- 
+Unit 11 Project
+Requirements
+[ x ] Three New Arrays
+[ x ] One New Loop
+[ x ] Custom Function
+[ x ] Three new HTML elements/CSS Declarations
 
-  <body>
-    <div class="container">
-      <div>
-        <h2 id="end">🍂🌼🌞⛄ | My Favorite Season</h2>
-        <canvas id="myCanvas" data-processing-sources="myP5Code.pde"> </canvas>
-      </div>
-    </div>
-  </body>
+Select ONE Additional 
+[ x ] Feature 1 - Array of Colors
+[  ] Feature 2 - Add to an Array using .push()
+[  ] Feature 3 - Image on the Canvas
+[  ] Feature 4 - Include prompt() to Get Info From User
+[  ] Feature 5 - KeyPressed Feature
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Scene 🌼</title>
+    <style>
+        body {
+            background-color: #c8facc;
+            font-family: Merriweather, sans-serif;
+            text-align: center;
+        }
+
+        #scene {
+            margin-top: 20px;
+            font-size: 2rem;
+        }
+
+        .flower {
+            display: inline-block;
+            margin: 11px;
+        }
+
+        h1 {
+            color: #317b3f;
+        }
+
+        #footer {
+            font-style: italic;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🌷 Spring Has Arrived!🌸</h1>
+
+<div id="scene"></div>
+
+<div id="footer">Spend Time With the Ones you Love and eat IceCream!!</div>
+
+
+<script>
+    
+    let flowerEmojis = ["🌸", "🌼", "🏵"];
+    let flowerColors = ["#ffb6c1", "#ffff99", "#ffc0cb"];
+    let flowerSizes = ["1.5rem", "2rem", "2.5rem"];
+
+    
+    function createFlower(emoji, color, size) {
+        let flower = document.createElement("div");
+        flower.className = "flower";
+        flower.innerText = emoji;
+        flower.style.color = color;
+        flower.style.fontSize = size;
+        document.getElementById("scene").appendChild(flower);
+    }
+
+    
+    for (let i = 0; i < flowerEmojis.length; i++) {
+        for (let j = 0; j < 3; j++) {
+            createFlower(flowerEmojis[i], flowerColors[i], flowerSizes[i]);
+        }
+    }
+</script>
+</body>
 </html>
 
-<!--- Taken From Khan Academy Intro to JS: Drawing & Animation --->
+  <script src="script.js"></script>
+</body>
+</html>
